@@ -19,5 +19,5 @@ from menu import views
 
 urlpatterns = [
 	url(r'^(?P<key>[ 0-9_]+)/$', views.item),
-    url(r'^$', views.main),
+	url(r'^$', views.main),
 ]
