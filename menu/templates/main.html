@@ -1,0 +1,38 @@
+{% load menu %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<title>Site</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Site</a>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row table">
+				<div class="col-md-3 col-xs-5" id="menu">
+					{% draw_menu 'main_menu' %}
+				</div>
+				<div class="col-md-9 col-xs-7">
+					<p class="lead">{{article}}</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.fetch_menu{
+			margin-left: 20px;
+		}
+		span{
+			padding: 5px;
+		}
+	</style>
+</html>

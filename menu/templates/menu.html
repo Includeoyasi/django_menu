@@ -1,0 +1,12 @@
+{% load menu %}
+
+<ul class="nav">
+{% for item in items %}
+	<li><a href="/{{item.id}}/"><span class="glyphicon glyphicon-menu-{% if item.id|is_father:father.id %}down{% else %}right{% endif %}" aria-hidden="true"></span>{{item.title}}</a></li>
+	{% if item.id|is_father:father.id %}
+	<div class="fetch_menu">
+		{% draw_menu key all_items father.id %}
+	</div>
+	{% endif %}
+{% endfor %}
+</ul>
